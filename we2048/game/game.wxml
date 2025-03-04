@@ -1,0 +1,52 @@
+<view class="container">
+    <!-- 标题 -->
+    <view class="heading">
+        <text class="title">2048</text>
+        <view class="scores-container">
+            <view class="score-container">SCORE: {{score}}</view>
+            <view class="best-container">BEST: {{bestScore}}</view>
+        </view>
+    </view>
+    <!-- 游戏介绍 -->
+    <view class="game-intro">
+        <text>
+            Join the numbers and get to the
+            <text class="important">2048 tile!</text>
+        </text>
+    </view>
+    <!-- 游戏按钮 -->
+    <button class="restart-button" bindtap="onRestart">New Game</button>
+    <!-- 游戏区域 -->
+    <view class="game-container">
+        <view class="grid-container">
+            <!-- 动态生成的网格 -->
+            <block wx:for="{{grid}}" wx:key="index">
+                <view class="grid-row">
+                    <block wx:for="{{item}}" wx:key="index">
+                        <view class="grid-cell">
+                            <!-- 动态生成的方块 -->
+                            <view class="tile" wx:if="{{item}}" data-value="{{item.value}}" data-merged="{{item.mergedFrom}}">
+                                <text class="tile-inner">{{item.value}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </view>
+        <!-- 游戏消息（胜利或失败） -->
+        <view class="game-message" wx:if="{{gameOver}}">
+            <text>{{gameMessage}}</text>
+            <button class="retry-button" bindtap="onRestart">Try Again</button>
+            <button class="keep-playing-button" bindtap="onKeepPlaying" wx:if="{{gameWon}}">
+                Keep Playing
+            </button>
+        </view>
+    </view>
+    <!-- 游戏说明 -->
+    <view class="game-explanation">
+        <text>
+            <strong class="important">How to play:</strong>
+            Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
+        </text>
+    </view>
+</view>

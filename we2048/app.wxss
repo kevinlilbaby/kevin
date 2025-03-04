@@ -1,0 +1,4 @@
+/* 全局样式 */
+page {
+    background: #faf8ef;
+}

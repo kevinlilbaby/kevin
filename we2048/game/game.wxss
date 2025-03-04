@@ -1,0 +1,204 @@
+/* 游戏容器 */
+.container {
+    width: 100%;
+    height: 100%;
+    background: #faf8ef;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* 标题 */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.scores-container {
+    display: flex;
+    gap: 20px;
+}
+
+.score-container,
+.best-container {
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 25px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+}
+
+/* 游戏介绍 */
+.game-intro {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* 游戏按钮 */
+.restart-button,
+.retry-button,
+.keep-playing-button {
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    margin: 10px 0;
+}
+
+/* 游戏区域 */
+.game-container {
+    margin: 40px auto;
+    width: 500px;
+    height: 500px;
+    background: #bbada0;
+    border-radius: 6px;
+    position: relative;
+}
+
+.grid-container {
+    position: absolute;
+    z-index: 1;
+}
+
+.grid-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.grid-row:last-child {
+    margin-bottom: 0;
+}
+
+.grid-cell {
+    width: 106.25px;
+    height: 106.25px;
+    margin-right: 15px;
+    background: rgba(238, 228, 218, 0.35);
+    border-radius: 3px;
+}
+
+.grid-cell:last-child {
+    margin-right: 0;
+}
+
+.tile {
+    width: 107px;
+    height: 107px;
+    line-height: 107px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    background: #eee4da;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.tile-inner {
+    color: #776e65;
+}
+
+.tile.tile-2 .tile-inner {
+    background: #eee4da;
+}
+
+.tile.tile-4 .tile-inner {
+    background: #ede0c8;
+}
+
+.tile.tile-8 .tile-inner {
+    background: #f2b179;
+    color: white;
+}
+
+.tile.tile-16 .tile-inner {
+    background: #f59563;
+    color: white;
+}
+
+.tile.tile-32 .tile-inner {
+    background: #f67c5f;
+    color: white;
+}
+
+.tile.tile-64 .tile-inner {
+    background: #f65e3b;
+    color: white;
+}
+
+.tile.tile-128 .tile-inner {
+    background: #edcf72;
+    color: white;
+    font-size: 45px;
+}
+
+.tile.tile-256 .tile-inner {
+    background: #edcc61;
+    color: white;
+    font-size: 45px;
+}
+
+.tile.tile-512 .tile-inner {
+    background: #edc850;
+    color: white;
+    font-size: 45px;
+}
+
+.tile.tile-1024 .tile-inner {
+    background: #edc53f;
+    color: white;
+    font-size: 35px;
+}
+
+.tile.tile-2048 .tile-inner {
+    background: #edc22e;
+    color: white;
+    font-size: 35px;
+}
+
+.tile.tile-super .tile-inner {
+    background: #3c3a32;
+    color: white;
+    font-size: 30px;
+}
+
+/* 游戏消息 */
+.game-message {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(238, 228, 218, 0.5);
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-message p {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* 游戏说明 */
+.game-explanation {
+    margin: 50px 0;
+    text-align: center;
+}
